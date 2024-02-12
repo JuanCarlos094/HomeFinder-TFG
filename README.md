@@ -14,9 +14,14 @@ Gestion de facturación zataca y gestión de apliación.
 
   PONER AHI LO QIUE QUEREIS HACER.
 
-4. Juanekko quiere un rolex
-5. Izan dejate la NFL y la superbowl.
-6. Jesus apruebanos.
+  PARA LOS ROLES: 
+  https://www.nigmacode.com/laravel/roles-de-usuario-en-laravel/
+  PLANTILLAS:
+  ADMIN LTE O LO QUE VEAMOS
 
+  
+
+ 
+  
 
 
