@@ -20,13 +20,13 @@ Gestion de facturación zataca y gestión de apliación.
   ADMIN LTE O LO QUE VEAMOS
 
   Resumen: 
-   DESCRIPCIÓN DEL PROYECTO: Aplicación que gestiona facturación para proveedor de servicios ,segun el rol asignado a dicho usuario, podrá realizar distintas funciones, entre ellas dar de alta, editar o borrar clientes y servicios, al igual que generar facturas.
+   DESCRIPCIÓN DEL PROYECTO:
+   Aplicación que gestiona facturación para proveedor de servicios ,segun el rol asignado a dicho usuario, podrá realizar distintas funciones, entre ellas dar de alta, editar o borrar clientes y servicios, al igual que generar facturas.
     Alcance:
         Generar facturación de servicios de manera automática y manual.
         Automatizar el proceso mensual, evitando errores.
 
     Descripción del Producto:
-        Exportar facturación por API a un ERP.
         Registro de clientes con información detallada.
         Registro de servicios con fecha de inicio.
         Facturación recurrente mensual de forma desatendida.
