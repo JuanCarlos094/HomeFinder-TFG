@@ -20,12 +20,14 @@ class UsuarioSeeder extends Seeder
         DB::table('usuarios')->insert([
             [
             'nombre' => 'Josesito',
-            'contraseña' => 'nullnull',
+            'email'=>'josesito@gmail.com',
+            'password' =>  Hash::make('nullnull'),
             'rol'=>'CEO',
             ],
           [
             'nombre' => 'Izan',
-            'contraseña' => 'nullnull',
+            'email'=>'izan@gmail.com',
+            'password' =>  Hash::make('nullnull'),
             'rol'=>'administracion',
          ],
            
