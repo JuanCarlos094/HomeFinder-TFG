@@ -2,9 +2,9 @@
 Gestion de facturación zataca y gestión de apliación.
 
 
-1. Login de usuario. 
+1. Login de usuario. HECHO
 2. CRUDs (en general, usuarios, servicios, clientes..etc)
-3. Control de roles.
+3. Control de roles. HECHO (FALTA)
 4. Validación de datos.
 5. Generación de facturas.
 
