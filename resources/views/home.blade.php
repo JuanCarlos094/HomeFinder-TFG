@@ -13,8 +13,17 @@
                             {{ session('status') }}
                         </div>
                     @endif
+                    
+                    @role('CEO')
+                    {{ __('Bienvenido CEO!') }}
 
-                    {{ __('You are logged in!') }}
+                    @endrole
+
+                    @role('administracion')
+
+                    {{__('Bienvenido, eres administrador!') }}
+
+                    @endrole
                 </div>
             </div>
         </div>

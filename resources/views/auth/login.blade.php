@@ -10,8 +10,8 @@
                         <div class="col-lg-6">
                             <div class="card-body p-md-5 mx-md-4">
                                 <div class="text-center">
-                                    <img src="https://pbs.twimg.com/profile_images/1078591592372547587/D0c-71Mj_400x400.png"
-                                        style="width: 115px;" alt="logo">
+                                    <a href="https://imgbb.com/"><img src="https://i.ibb.co/hDNWw6d/zataca.png"  style="width: 115px;" alt="logo"></a>
+                                       
                                     <h4 class="mt-1 mb-5 pb-1">Inicia sesión en el sistema</h4>
                                 </div>
 
@@ -41,13 +41,13 @@
                                         @enderror
                                     </div>
 
-                                    <div class="form-outline mb-4">
+                                    <!--<div class="form-outline mb-4">
                                         <label class="form-label" for="rol">Rol en la empresa</label>
                                         <select id="rol" name="rol" class="form-select">
                                             <option value="CEO">CEO</option>
                                             <option value="Administración">Administración</option>
                                         </select>
-                                    </div>
+                                    </div>-->
                              
                                     <div class="text-center pt-1 mb-5 pb-1">    
                                         <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="submit">Log in</button>
