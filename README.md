@@ -2,17 +2,22 @@
 Gestion de facturación zataca y gestión de apliación.
 
 
-1. Login de usuario. 
+1. Login de usuario. HECHO
 2. CRUDs (en general, usuarios, servicios, clientes..etc)
-3. Control de roles.
+3. Control de roles. HECHO (FALTA)
 4. Validación de datos.
 5. Generación de facturas.
 
-  DIEGO: 
-  IZAN:
-  JUANEKKO:
+INSTRUCCIONES PARA CORRER EL PROYECTO:
 
-  PONER AHI LO QIUE QUEREIS HACER.
+SI ES LA PRIMERA VEZ QUE LO INSTALAS: 
+(En la carpeta del proyecto): 
+composer install
+npm install
+
+PARA EJECUTAR LA APLICACIÓN: 
+php artisan serve
+npm run dev
 
   PARA LOS ROLES: 
   https://www.nigmacode.com/laravel/roles-de-usuario-en-laravel/
