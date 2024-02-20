@@ -39,25 +39,11 @@
                                                 <strong>{{ $message }}</strong>
                                             </span>
                                         @enderror
-                                    </div>
-
-                                    <!--<div class="form-outline mb-4">
-                                        <label class="form-label" for="rol">Rol en la empresa</label>
-                                        <select id="rol" name="rol" class="form-select">
-                                            <option value="CEO">CEO</option>
-                                            <option value="Administración">Administración</option>
-                                        </select>
-                                    </div>-->
-                             
+                                    </div>                            
                                     <div class="text-center pt-1 mb-5 pb-1">    
                                         <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="submit">Log in</button>
                                         <br>
                                         <a class="text-muted" href="{{ route('password.request') }}">Olvidé mi contraseña</a>
-                                    </div>
-
-                                    <div class="d-flex align-items-center justify-content-center pb-4">
-                                        <p class="mb-0 me-2">No tienes una cuenta?</p>
-                                        <a href="{{ route('register') }}" class="btn btn-outline-danger">Create new</a>
                                     </div>
                                 </form>
 
