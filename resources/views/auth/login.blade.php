@@ -39,12 +39,22 @@
                                                 <strong>{{ $message }}</strong>
                                             </span>
                                         @enderror
+<<<<<<< HEAD
                                     </div>                            
+=======
+                                    </div>
+                             
+>>>>>>> main
                                     <div class="text-center pt-1 mb-5 pb-1">    
                                         <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="submit">Log in</button>
                                         <br>
                                         <a class="text-muted" href="{{ route('password.request') }}">Olvidé mi contraseña</a>
                                     </div>
+<<<<<<< HEAD
+=======
+
+                            
+>>>>>>> main
                                 </form>
 
                             </div>

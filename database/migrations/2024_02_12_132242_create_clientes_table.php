@@ -14,15 +14,11 @@ return new class extends Migration
         Schema::create('clientes', function (Blueprint $table) {
             $table->id();
             $table->string("NIF")->unique();
-            $table->string('razon_social');
-            $table->string('nombre_comercial');
-            $table->string('licencia');
+            $table->string('razon_social')->unique();
+            $table->string('nombre_comercial')->nullable();
             $table->string('numero_cups')->unique();
-            $table->string('cups_ultima_facturacion');
-            $table->string('canal_CRM');
-            $table->string('codigo_SIMEI');
-            $table->string('url');
-
+            $table->string('url')->unique();
+            $table->string('SIMEL')->unique();
         });
     }
 

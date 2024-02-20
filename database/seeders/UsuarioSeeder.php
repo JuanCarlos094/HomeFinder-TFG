@@ -7,6 +7,10 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
+use spatie\Permission\Models\Permission;
+use Spatie\Permission\Models\Role;
+use App\Models\usuario;
+
 
 
 class UsuarioSeeder extends Seeder
@@ -35,6 +39,12 @@ class UsuarioSeeder extends Seeder
         ]
         
         );
+        $role1= Role::create(["name"=>"CEO"]);
+        $role2= Role::create(["name"=>"administracion"]);
+        $ceo = usuario::find(1);
+        $administrador = usuario::find(2);
+        $ceo->assignRole($role1);
+        $administrador->assignRole($role2);
     }
     
 }

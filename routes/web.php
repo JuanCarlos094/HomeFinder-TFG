@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Controllers\UsuarioController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,12 +18,16 @@ Route::group(['middleware' => ['guest']], function () {
     Route::get('/', function () {
         return view('auth/login');
     });
-    
+
     Auth::routes(['verify' => true]);
 });
 
+Route::post('/logout', '\App\Http\Controllers\Auth\LoginController@logout')->name('logout');
+
 Route::group(['middleware' => ['auth', 'verified'], 'as' => 'admin.'], function () {
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+    Route::resource('usuarios', UsuarioController::class);
 });
 
 

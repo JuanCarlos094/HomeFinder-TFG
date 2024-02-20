@@ -9,7 +9,6 @@ class cliente extends Model
 {
     use HasFactory;
     protected $table = "clientes";
-    protected $fillable = ["NIf","razon_social","nombre_comercial","licencia","numero_cups","cups_ultima_facturacion","canal_CRM","codigo_SIMEI","url"];
+    protected $fillable = ["NIF","razon_social","nombre_comercial","numero_cups","url","SIMEL"];
     public $timestamps = false;
-    
 }
