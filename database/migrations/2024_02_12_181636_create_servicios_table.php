@@ -15,11 +15,11 @@ return new class extends Migration
             $table->id();
             $table->string('nombre_servicio');
             $table->string('tipo_servicio');
-            $table->string('inicio_prestaciono');
-            $table->string('fin_prestacion');
-            $table->string('descuento');
-            $table->string('fecha_inicio_descuento');
-            $table->string('fecha_fin_descuento');
+            $table->date('inicio_prestacion');
+            $table->date('fin_prestacion');
+            $table->integer('descuento');
+            $table->date('fecha_inicio_descuento');
+            $table->date('fecha_fin_descuento');
             $table->timestamps();
         });
     }
