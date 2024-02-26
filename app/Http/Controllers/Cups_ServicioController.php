@@ -63,7 +63,7 @@ class Cups_ServicioController extends Controller
         $clientes = cliente::all();
         $servicios = servicio::all();
         $unidades = unidad_precio_mes::all();
-        return view('admin.cups_servicios.index', compact('cups_servicio'), compact('cups'), compact('clientes'), compact('servicios'), compact('unidades'));
+        return view('admin.cups_servicios.edit', compact('cups_servicio', 'cups','clientes', 'servicios', 'unidades'));
     }
 
     /**

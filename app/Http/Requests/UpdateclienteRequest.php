@@ -23,23 +23,23 @@ class UpdateclienteRequest extends FormRequest
             'NIF'=>[
                 'required',
                 'regex:/^[0-9]{8}[A-Za-z]$/i', 
-                'unique: clientes, NIF'. $this->cliente->id,
+                'unique:clientes,NIF,'. $this->id
             ],
             'razon_social'=>[
                 'required',
-                'unique:clientes,razon_social'. $this->cliente->id,
+                'unique:clientes,razon_social,'. $this->id,
             ],
             'nombre_comercial'=>[
                 'required',
-                'unique:clientes,nombre_comercial'. $this->cliente->id,
+                'unique:clientes,nombre_comercial,'. $this->id,
             ],
             'url'=>[
                 'required',
-                'unique:clientes,url'. $this->cliente->id,
+                'unique:clientes,url,'. $this->id,
             ],
             'SIMEL'=>[
                 'required',
-                'unique:clientes,SIMEL'. $this->cliente->id,
+                'unique:clientes,SIMEL,'. $this->id
             ],
         ];
     }

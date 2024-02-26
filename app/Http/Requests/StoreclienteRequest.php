@@ -31,10 +31,6 @@ class StoreclienteRequest extends FormRequest
                 'required',
                 'unique:clientes,razon_social',
             ],
-            'nombre_comercial'=>[
-                'required',
-                'unique:clientes,nombre_comercial',
-            ],
             'url'=>[
                 'required',
                 'unique:clientes,url',

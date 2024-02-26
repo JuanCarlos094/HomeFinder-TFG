@@ -9,7 +9,7 @@ return new class extends Migration
     /*Run the migrations.*/
   public function up(): void{Schema::create('cups', function (Blueprint $table) {
     $table->id();
-    $table->foreignId('cliente_id');
+    $table->unsignedBigInteger('cliente_id');
     $table->string('cod_cups')->unique();
     $table->string('direccion');
 

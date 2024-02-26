@@ -26,16 +26,16 @@
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-body">
-                        <a href="{{ route('admin.clientes.create') }}" class="btn btn-primary"> Nuevo clientee</a><br><br>
+                        <a href="{{ route('admin.clientes.create') }}" class="btn btn-primary"> Nuevo cliente</a><br><br>
                         <table class="table table-bordered" id="cliente_table">
                             <thead>
                                 <tr>
                                     <th>NIF del cliente</th>
                                     <th>Razon Social</th>
                                     <th>Nombre Comercial</th>
-                                    <th>Numero CUPS</th>
                                     <th>URL</th>
                                     <th>SIMEL</th>
+                                    <th>Acciones</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -47,15 +47,17 @@
                                     <td>{{$cliente->url}}</td>
                                     <td>{{$cliente->SIMEL}}</td>
                                     <td>
-                                        <a href="{{ route('admin.clientes.edit', $cliente->id) }}" class="btn btn-success">
+                                     
+                                        <a href="{{ route('admin.clientes.edit',$cliente->id) }}" class="btn btn-success">
                                             Editar
                                         </a>
-
+                                        
                                         <form action="{{ route('admin.clientes.destroy', $cliente->id) }}" id="delete_form" method="POST" onsubmit="return confirm('Esta seguro que desea eliminar el registro?')" style="display: inline-block;">
                                             <input type="hidden" name="_method" value="DELETE">
                                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                             <input type="submit" class="btn btn-danger" value="Eliminar">
                                         </form>
+                                     
                                     </td>
                                 </tr>
                                 @endforeach

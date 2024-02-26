@@ -33,15 +33,17 @@
                                     <th>ID del cliente dueño</th>
                                     <th>Codigo de cup</th>
                                     <th>Direccion</th>
+                                    <th>Acciones</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach ($cups as $cup)
                                 <tr>
-                                    <td>{{$cup->cliente_id}}</td>
-                                    <td>{{$cup->cod_cups}}</td>
-                                    <td>{{$cup->direccion}}</td>
+                                    <td>{{ $cup->cliente_id ?? 'N/A' }}</td>
+                                    <td>{{ $cup->cod_cups ?? 'N/A' }}</td>
+                                    <td>{{ $cup->direccion ?? 'N/A' }}</td>
                                     <td>
+    
                                         <a href="{{ route('admin.cups.edit', $cup->id) }}" class="btn btn-success">
                                             Editar
                                         </a>
@@ -51,6 +53,7 @@
                                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                             <input type="submit" class="btn btn-danger" value="Eliminar">
                                         </form>
+                                     
                                     </td>
                                 </tr>
                                 @endforeach

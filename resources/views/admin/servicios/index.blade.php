@@ -32,6 +32,7 @@
                                 <tr>
                                     <th>Nombre de servicios</th>
                                     <th>Tipo de servicio</th>
+                                    <th>Acciones</th>
                    
                                 </tr>
                             </thead>
@@ -42,6 +43,7 @@
                                     <td>{{$servicio->tipo_servicio}}</td>
                                 
                                     <td>
+                                    
                                         <a href="{{ route('admin.servicios.edit', $servicio->id) }}" class="btn btn-success">
                                             Editar
                                         </a>
@@ -51,6 +53,7 @@
                                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                             <input type="submit" class="btn btn-danger" value="Eliminar">
                                         </form>
+                                      
                                     </td>
                                 </tr>
                                 @endforeach

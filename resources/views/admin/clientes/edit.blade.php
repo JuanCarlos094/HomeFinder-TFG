@@ -16,7 +16,7 @@
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-body">
-                        <form method="POST" action="{{ route('admin.clientes.update', $cliente->id) }}">
+                        <form method="POST" action="{{ route('admin.clientes.update',$cliente->id) }}">
                             @csrf
                             @method('PUT')
                             <div class="form-group">

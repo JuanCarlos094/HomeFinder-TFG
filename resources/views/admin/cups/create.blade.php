@@ -23,7 +23,9 @@
                                 <label for="cliente_id" class="required">Cliente</label>
                                 <select name="cliente_id" id="cliente_id">
                                 @foreach ($clientes as $cliente)
-                                <option value="{{$cliente->id}}" class="form-control">{{$cliente->id}} - {{$cliente->NIF}} - {{$cliente->razon_social}}</option>
+                                <option value="{{ $cliente->id }}" {{ old('cliente_id') == $cliente->id ? 'selected' : '' }}>
+                                    {{ $cliente->id }} - {{ $cliente->NIF }} - {{ $cliente->razon_social }}
+                                </option>
                                 @endforeach
                                 </select>
                             </div>

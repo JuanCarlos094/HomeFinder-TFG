@@ -40,6 +40,7 @@
                                     <th>Descuento</th>
                                     <th>Inicio Descuento</th>
                                     <th>Fin Descuento</th>
+                                    <th>Acciones</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -72,6 +73,7 @@
                                     <td>{{$cups_servicio->fecha_inicio_descuento}}</td>
                                     <td>{{$cups_servicio->fecha_fin_descuento}}</td>
                                     <td>
+                                      
                                         <a href="{{ route('admin.cups_servicios.edit', $cups_servicio->id) }}" class="btn btn-success">
                                             Editar
                                         </a>
@@ -81,6 +83,7 @@
                                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                             <input type="submit" class="btn btn-danger" value="Eliminar">
                                         </form>
+                                     
                                     </td>
                                 </tr>
                                 @endforeach

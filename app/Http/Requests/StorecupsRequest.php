@@ -22,8 +22,14 @@ class StorecupsRequest extends FormRequest
     public function rules(): array
     {
         return [
+            
+            'cliente_id'=>[
+
+                'required',
+        ],
             'cod_cups' => [
                 'required',
+                'unique:cups,cod_cups'
             ],
             'direccion' => [
                 'required',

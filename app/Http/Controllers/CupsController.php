@@ -47,18 +47,18 @@ class CupsController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(cups $cups)
+    public function edit(cups $cup)
     {
         $clientes = cliente::all();
-        return view('admin.cups.index', compact('cups'), compact('clientes'));
+        return view('admin.cups.edit', compact('cup','clientes'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdatecupsRequest $request, cups $cups)
+    public function update(UpdatecupsRequest $request, cups $cup)
     {
-        $cups->update($request->validated());
+        $cup->update($request->validated());
         return redirect()->route('admin.cups.index')->with('success', 'cup editado con exito');
     }
 
