@@ -10,11 +10,12 @@ class servicio extends Model
     use HasFactory;
    
     protected $table = "servicios";
-    protected $fillable = ["nombre_servicio","tipo_Servicio","inicio_prestacion","fin_prestacion","descuento","fecha_inicio_descuento","fecha_fin_descuento"];
+    protected $fillable = ["nombre_servicio","tipo_servicio"];
     public $timestamps = false;
 
-    public function clientes()
+    public function cups_servicios()
     {
-        return $this->belongsToMany(cliente::class);
+        return $this->hasMany(cups_servicio::class);
     }
+
 }

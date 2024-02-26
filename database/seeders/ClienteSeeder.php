@@ -18,26 +18,25 @@ class ClienteSeeder extends Seeder
     public function run(): void
     {
         //
-        DB::table('clientes')->insert([
+        DB::table('clientes')->insert(
             [
-            'NIF' => '20986478M',
-            'razon_social'=>'Antonio Riquelme Gil',
-            'nombre_comercial'=>null,
-            'numero_cups' =>  'ES0029593937926300PD',
-            'url'=>'https://antonioexample',
-            'SIMEL'=>'23',
-            ],
-            [
-                'NIF' => '01987463K',
-                'razon_social'=>'gonzalez y hermanos',
-                'nombre_comercial'=>'Merceria Loli',
-                'numero_cups' =>  'ES0029593937926309PD',
-                'url'=>'https://mercerialoli',
-                'SIMEL'=>'67',
-            ],
-        ]
-        
+                [
+                    'NIF' => '20986478M',
+                    'razon_social' => 'Antonio Riquelme Gil',
+                    'nombre_comercial' => null,
+                    'url' => 'https://antonioexample',
+                    'SIMEL' => '23',
+                ],
+                [
+                    'NIF' => '01987463K',
+                    'razon_social' => 'gonzalez y hermanos',
+                    'nombre_comercial' => 'Merceria Loli',
+                    'url' => 'https://mercerialoli',
+                    'SIMEL' => '67',
+                ],
+            ]
+
         );
     }
-    
+
 }

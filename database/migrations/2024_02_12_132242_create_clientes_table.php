@@ -16,7 +16,6 @@ return new class extends Migration
             $table->string("NIF")->unique();
             $table->string('razon_social')->unique();
             $table->string('nombre_comercial')->nullable();
-            $table->string('numero_cups')->unique();
             $table->string('url')->unique();
             $table->string('SIMEL')->unique();
         });

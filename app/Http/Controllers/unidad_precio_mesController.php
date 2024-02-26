@@ -2,19 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\usuario;
 use Illuminate\Http\Request;
 
-class UsuarioController extends Controller
+class unidad_precio_mesController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $usuarios =  usuario::all();
-
-        return view('admin.usuarios.index', compact('usuarios'));
+        //
     }
 
     /**

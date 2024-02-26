@@ -21,6 +21,9 @@ class DatabaseSeeder extends Seeder
     $this->call([
         UsuarioSeeder::class,
         ClienteSeeder::class,
+        ServicioSeeder::class,
+        CupsSeeder::class,
+        unidad_precio_mesSeeder::class,
     ]);
     }
     

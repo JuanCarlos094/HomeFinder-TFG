@@ -27,9 +27,11 @@
         @include('layouts.partials.footer')
     </div>
 
-    <script src="{{ asset('js/plugins/jquery.min.js') }}"></script>
     <script src="{{ asset('js/plugins/bootstrap.bundle.js') }}"></script>
     <script src="{{ asset('js/adminlte.min.js') }}"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.8/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.8/js/dataTables.bootstrap5.min.js"></script>
     <form id="logoutform" action="{{ route('logout') }}" method="POST" style="display: none;">
         {{ csrf_field() }}
     </form>

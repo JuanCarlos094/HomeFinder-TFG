@@ -1,5 +1,9 @@
 <?php
+use App\Http\Controllers\clienteController;
+use App\Http\Controllers\ServicioController;
 use App\Http\Controllers\UsuarioController;
+use App\Http\Controllers\CupsController;
+use App\Http\Controllers\Cups_ServicioController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,6 +32,10 @@ Route::group(['middleware' => ['auth', 'verified'], 'as' => 'admin.'], function 
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
     Route::resource('usuarios', UsuarioController::class);
+    Route::resource('clientes', clienteController::class);
+    Route::resource('servicios', ServicioController::class);
+    Route::resource('cups', CupsController::class);
+    Route::resource('cups_servicios', Cups_ServicioController::class);
 });
 
 
