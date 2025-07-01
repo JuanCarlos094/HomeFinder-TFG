@@ -1,73 +1,25 @@
-<aside class="main-sidebar sidebar-danger bg-gradient-danger elevation-4">
-    <a href="#" class="brand-link">
-        <span class="brand-text font-weight-light text-white"">PROYECTO ZATACA</span>
-    </a>
+<!-- Botón toggle solo visible en móviles -->
+<button class="btn btn-light d-md-none m-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileSidebar">
+    <i class="fas fa-bars"></i>
+</button>
 
-    <div class="sidebar">
-        <nav class="mt-2">
-            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-                <li class="nav-item text-white">
-                    <a href="{{ 'home' }}" class="nav-link">
-                        <i class="nav-icon fas fa-tachometer-alt" style="color: white;"></i>
-                        <p class="text-white">
-                            Dashboarda
-                        </p>
-                    </a>
-                </li>
-                <li class="nav-item text-white">
-                    <a href="{{ route('admin.usuarios.index') }}" class="nav-link">
-                        <i class="nav-icon fas fa-users" style="color: white;"></i>
-                        <p class="text-white">
-                            Usuarios
-                        </p>
-                    </a>
-                </li>
-                <li class="nav-item text-white">
-                    <a href="{{ route('admin.clientes.index') }}" class="nav-link">
-                        <i class="nav-icon fas fa-user-tie" style="color: white;"></i>
-                        <p class="text-white">
-                            Clientes
-                        </p>
-                    </a>
-                </li>
-                <li class="nav-item text-white">
-                    <a href="{{ route('admin.cups.index') }}" class="nav-link">
-                        <i class="nav-icon fas fa-user-tie" style="color: white;"></i>
-                        <p class="text-white">
-                            CUPS
-                        </p>
-                    </a>
-                </li>
-                <li class="nav-item text-white">
-                    <a href="{{ route('admin.servicios.index') }}"class="nav-link">
-                        <i class="nav-icon fas fa-project-diagram" style="color: white;"></i>
-                        <p class="text-white">
-                            Servicios
-                        </p>
-                    </a>
-                </li>
-                <li class="nav-item text-white">
-                    <a href="{{ route('admin.cups_servicios.index') }}"class="nav-link">
-                        <i class="nav-icon fas fa-project-diagram" style="color: white;"></i>
-                        <p class="text-white">
-                            Contrataciones
-                        </p>
-                    </a>
-                </li>
-                <li class="nav-item text-white">
-                    <form id="logoutform" action="{{ url('/logout') }}" method="POST" style="display: none;">
-                        @csrf
-                    </form>
-                
-                    <button class="nav-link" onclick="event.preventDefault(); document.getElementById('logoutform').submit();">
-                        <p>
-                            <i class="fas fa-fw fa-sign-out-alt nav-icon" style="color: white;"></i>
-                            Cerrar sesión
-                        </p>
-                    </button>
-                </li>
-                
-            </ul>
-        </nav>
+<!-- Sidebar en escritorio -->
+@role('admin')
+<aside class="main-sidebar sidebar-danger bg-gradient-secondary elevation-4 d-none d-md-block">
+@else
+<aside class="main-sidebar sidebar-danger elevation-4 d-none d-md-block" style="background-color: #3B67EC;">
+@endrole
+    {{-- Contenido del sidebar para escritorio --}}
+    @include('layouts.partials.sidebar-content')
+    </aside>
+
+<!-- Sidebar tipo offcanvas para móviles -->
+<div class="offcanvas offcanvas-start d-md-none" tabindex="-1" id="mobileSidebar">
+    <div class="offcanvas-header" style="background-color: #3B67EC;">
+        <h5 class="text-white">Menú</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
-</aside>
+    <div class="offcanvas-body p-0" style="background-color: #3B67EC;">
+    @include('layouts.partials.sidebar-content')
+    </div>
+</div>

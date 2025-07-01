@@ -22,14 +22,13 @@
                         </div>
                     @endif
                     
-                    @role('CEO')
-                    {{ __('Bienvenido CEO!') }}
+                    @role('admin')
 
-                    @endrole
+                    {{ __('Bienvenido CEO, ' . auth()->user()->nombre . '!') }}
 
-                    @role('administracion')
+                    @else
 
-                    {{__('Bienvenido, eres administrador!') }}
+                    {{ __('Bienvenido usuario, ' . auth()->user()->nombre . '!') }}
 
                     @endrole
 

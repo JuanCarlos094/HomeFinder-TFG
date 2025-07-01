@@ -18,12 +18,12 @@ class CupsSeeder extends Seeder
                 [
                     'cliente_id'=> '1',
                     'cod_cups' => 'ES0397827291143213XW',
-                    'direccion' => 'Plaza Alicante n5, Elche',
+                    'direccion' => 'Calle hola, Elche',
                 ],
                 [
                     'cliente_id'=> '2',
                     'cod_cups' => 'ES0022670430140321VA',
-                    'direccion' => 'Calle Concepcion n5, Elche',
+                    'direccion' => 'Calle adios, Elche',
                 ],
             ]
 

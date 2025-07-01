@@ -47,12 +47,15 @@
                                         <a href="{{ route('admin.cups.edit', $cup->id) }}" class="btn btn-success">
                                             Editar
                                         </a>
-
+                                        @role('CEO')
                                         <form action="{{ route('admin.cups.destroy', $cup->id) }}" id="delete_form" method="POST" onsubmit="return confirm('Esta seguro que desea eliminar el registro?')" style="display: inline-block;">
                                             <input type="hidden" name="_method" value="DELETE">
                                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                             <input type="submit" class="btn btn-danger" value="Eliminar">
                                         </form>
+                                        @else
+                                         Para eliminar, pedir permiso al CEO
+                                        @endrole
                                      
                                     </td>
                                 </tr>

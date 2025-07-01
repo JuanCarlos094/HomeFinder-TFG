@@ -20,31 +20,44 @@ class UsuarioSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        // Insertar usuarios
         DB::table('usuarios')->insert([
             [
-            'nombre' => 'Josesito',
-            'email'=>'josesito@gmail.com',
-            'password' =>  Hash::make('nullnull'),
-            'rol'=>'CEO',
+                'nombre' => 'Jaime',
+                'email' => 'ejemplo@gmail.com',
+                'password' => Hash::make('12345678'),
+                'rol' => 'admin',
             ],
-          [
-            'nombre' => 'Izan',
-            'email'=>'izan@gmail.com',
-            'password' =>  Hash::make('nullnull'),
-            'rol'=>'administracion',
-         ],
-           
+            [
+                'nombre' => 'Juanca',
+                'email' => 'ejemplo1@gmail.com',
+                'password' => Hash::make('null'),
+                'rol' => 'usuario',
+            ],
+            [
+                'nombre' => 'Alvaro',
+                'email' => 'ejemplo2@gmail.com',
+                'password' => Hash::make('null'),
+                'rol' => 'usuario',
+            ],
+        ]);
 
-        ]
-        
-        );
-        $role1= Role::create(["name"=>"CEO"]);
-        $role2= Role::create(["name"=>"administracion"]);
-        $ceo = usuario::find(1);
-        $administrador = usuario::find(2);
-        $ceo->assignRole($role1);
-        $administrador->assignRole($role2);
+        // Crear roles si no existen
+        $roleAdmin = Role::firstOrCreate(['name' => 'admin', 'guard_name' => 'web']);
+$roleUsuario = Role::firstOrCreate(['name' => 'usuario', 'guard_name' => 'web']);
+
+
+        // Asignar roles a usuarios si existen
+        if ($admin = Usuario::find(1)) {
+            $admin->assignRole($roleAdmin);
+        }
+
+        if ($usuario1 = Usuario::find(2)) {
+            $usuario1->assignRole($roleUsuario);
+        }
+
+        if ($usuario2 = Usuario::find(3)) {
+            $usuario2->assignRole($roleUsuario);
+        }
     }
-    
 }

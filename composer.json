@@ -7,13 +7,18 @@
     "require": {
         "php": "^8.1",
         "almasaeed2010/adminlte": "~3.0",
+        "barryvdh/laravel-dompdf": "^2.1",
         "guzzlehttp/guzzle": "^7.2",
         "jeroennoten/laravel-adminlte": "^3.9",
         "laravel/framework": "^10.10",
         "laravel/sanctum": "^3.3",
         "laravel/tinker": "^2.8",
         "laravel/ui": "^4.4",
+        "psy/psysh": "0.11.12",
         "spatie/laravel-permission": "^6.3",
+        "symfony/browser-kit": "^7.2",
+        "symfony/dom-crawler": "^7.2",
+        "symfony/http-client": "^7.2",
         "yajra/laravel-datatables-oracle": "10.3.1"
     },
     "require-dev": {

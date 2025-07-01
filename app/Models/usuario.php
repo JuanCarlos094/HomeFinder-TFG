@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Notifications\Notifiable;
@@ -10,13 +11,16 @@ use Illuminate\Foundation\Auth\User as BaseAuthenticatable;
 use Spatie\Permission\Models\Role;
 use Spatie\Permission\Traits\HasRoles;
 
-class usuario extends BaseAuthenticatable
-{ 
+class Usuario extends BaseAuthenticatable
+{
     use HasApiTokens, HasFactory, Notifiable, HasRoles;
+
+    protected $guard_name = 'web';
+
     protected $table = "usuarios";
-    protected $fillable = ["nombre","email","password","rol"];
+    protected $fillable = ["nombre", "email", "password", "rol"];
     public $timestamps = false;
-       /**
+    /**
      * The attributes that should be hidden for serialization.
      *
      * @var array<int, string>
@@ -37,4 +41,8 @@ class usuario extends BaseAuthenticatable
     ];
 
 
+    public function reservas()
+    {
+        return $this->hasMany(\App\Models\Reserva::class, 'usuario_id');
+    }
 }

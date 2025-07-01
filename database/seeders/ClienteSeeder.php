@@ -21,17 +21,17 @@ class ClienteSeeder extends Seeder
         DB::table('clientes')->insert(
             [
                 [
-                    'NIF' => '20986478M',
-                    'razon_social' => 'Antonio Riquelme Gil',
+                    'NIF' => '74377715H',
+                    'razon_social' => 'Pepe',
                     'nombre_comercial' => null,
-                    'url' => 'https://antonioexample',
+                    'url' => 'https://pepeexample',
                     'SIMEL' => '23',
                 ],
                 [
-                    'NIF' => '01987463K',
-                    'razon_social' => 'gonzalez y hermanos',
-                    'nombre_comercial' => 'Merceria Loli',
-                    'url' => 'https://mercerialoli',
+                    'NIF' => '33245678I',
+                    'razon_social' => 'Manolo e hijos',
+                    'nombre_comercial' => 'Manolito',
+                    'url' => 'https://manolito',
                     'SIMEL' => '67',
                 ],
             ]
